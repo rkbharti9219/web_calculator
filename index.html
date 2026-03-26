@@ -1,0 +1,96 @@
+<html>
+<head><title> https//:calculator.rkbharti.com</title></head>
+<style>
+body{
+background-color:#e0e5ec;
+display:flex;
+justify-content:center;
+align-items:center;
+height:80vh;
+}
+input{
+font-family: Times New Roman;
+background:#e0e5ec;
+box-shadow:10px 10px 10px #a3b1c6, -10px -10px 20px #ffffff;
+border:3px solid #e0e5ec;
+margin:3%;
+}
+.div1{
+height:425px;
+text-align:center;
+background:#e0e5ec;
+box-shadow:10px 10px 10px #a3b1c6, -10px -10px 20px #ffffff;
+border:3px solid #e0e5ec;
+border-radius:20px;
+}
+.div2{
+background:#e0e5ec;
+box-shadow:10px 10px 10px #a3b1c6, -10px -10px 20px #ffffff;
+border:3px solid #e0e5ec;
+border-radius:20px;
+height:340px;
+}
+h2{
+font-family:Times New Roman;
+}
+</style>
+<body>
+<div class="div1">
+<h2>TRY ME!</h2>
+<div class="div2">
+<table>
+<tr>
+<th colspan="3"><input type="text" id="r" style="width:250px;height:40px;border-radius:20px;padding:10px; margin:1%;background:rgb(0,0,0);color:yellow;">
+<th> <input type="button" value="AC" onclick="allclear()" style="border-radius:20px; height:40px;width:80px;">
+</tr>
+<tr>
+<th><input type="button" value="1" onclick="pick(1)" style="border-radius:20px;width:80px; height:40px;">
+<th><input type="button" value="2" onclick="pick(2)"style="border-radius:20px;width:80px; height:40px;">
+<th><input type="button" value="3" onclick="pick(3)"style="border-radius:20px;width:80px; height:40px;">
+<th><input type="button" value="+" onclick="pick('+')"style="border-radius:20px;width:80px; height:40px;">
+</tr>
+<tr>
+<th><input type="button" value="4" onclick="pick(4)"style="border-radius:20px;width:80px; height:40px;">
+<th><input type="button" value="5" onclick="pick(5)"style="border-radius:20px;width:80px; height:40px;">
+<th><input type="button" value="6" onclick="pick(6)"style="border-radius:20px;width:80px; height:40px;">
+<th><input type="button" value="-" onclick="pick('-')"style="border-radius:20px;width:80px; height:40px;">
+</tr>
+<tr>
+<th><input type="button" value="7" onclick="pick(7)"style="border-radius:20px;width:80px; height:40px;">
+<th><input type="button" value="8" onclick="pick(8)"style="border-radius:20px;width:80px; height:40px;">
+<th><input type="button" value="9" onclick="pick(9)"style="border-radius:20px;width:80px; height:40px;">
+<th><input type="button" value="*" onclick="pick('*')"style="border-radius:20px;width:80px; height:40px;">
+</tr>
+<tr>
+<th><input type="button" value="." onclick="pick('.')"style="border-radius:20px;width:80px; height:40px;">
+<th><input type="button" value="0" onclick="pick(0)"style="border-radius:20px;width:80px; height:40px;">
+<th><input type="button" value="=" onclick="solve()"style="border-radius:20px;width:80px; height:40px;">
+<th><input type="button" value="/" onclick="pick('/')"style="border-radius:20px;width:80px; height:40px;">
+</tr>
+</table>
+<textarea name="comment" style="width:335px; height:80px; border-radius:20px;padding:20px;font-family: Times New Roman;
+background:#e0e5ec;box-shadow:10px 10px 10px #a3b1c6, -10px -10px 20px #ffffff;border:3px solid #e0e5ec;margin:5px;" placeholder="You can plot your comments here...." id="comment"></textarea>
+</div>
+</div>
+<script>
+function pick(val)
+{
+document.getElementById("r").value +=val;
+}
+function allclear()
+{
+document.getElementById("r").value = "  ";
+}
+
+function solve()
+{
+var x=document.getElementById("r").value ;
+var y= eval(x);
+document.getElementById("r").value=y;
+
+}
+
+</script>
+
+</body>
+</html>
